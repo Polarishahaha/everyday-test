@@ -10,7 +10,7 @@ for i in range(1,10) :
         fact = i * j
         result = f'({i}*{j})={fact}'
         if j < 9 :
-            print(f'{result:<12}',end='\t')
+            print(f'{result:<12}',end='')
         else :
             print(f'({i}*{j})={fact}')
 # 这好像是一个倒着的表？
@@ -23,7 +23,7 @@ for i in range(1,10) :
         fact = i * j 
         result = f'({i}*{j})={fact}'
         if j < i :
-            print(f'{result:<12}',end='\t')
+            print(f'{result:<12}',end='')
         else :
             print(f'{result:<12}')
 
