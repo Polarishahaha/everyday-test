@@ -1,7 +1,17 @@
-N = input('请输入总样本数：')  # 总样本数为N
-B = input('请输入批次大小：')  # 批次大小为B
 
 # 明天写一些边界条件优化，包括：输入的不是数、输入的N和B<=0 等情况
+
+while True :
+    N = input('请输入总样本数：')  # 总样本数为N
+    B = input('请输入批次大小：')  # 批次大小为B
+
+    if N.isdigit() and B.isdigit() :
+         N = int(N)
+         B = int(B)
+         break
+    else :
+         print('输入数据类型有误，请重新输入。')
+
 
 ful_count = 0
 left_count = 0  
