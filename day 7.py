@@ -32,37 +32,37 @@ while (count_player < 3) and (count_computer < 3) and (total_rounds < 10) :
 
 # 判断输赢
 
-    if player == '石头' and computer == '剪刀' :   # 第一组
+    elif player == '石头' and computer == '剪刀' :   # 第一组
         count_player += 1
         print(f'玩家出{player},电脑出{computer},玩家胜利')
         valid_rounds += 1
         total_rounds += 1
 
-    if player == '石头' and computer == '布' :     # 第二组
+    elif player == '石头' and computer == '布' :     # 第二组
         count_computer += 1
         print(f'玩家出{player},电脑出{computer},电脑胜利')
         valid_rounds += 1
         total_rounds += 1
 
-    if player == '剪刀' and computer == '布' :    # 第三组
+    elif player == '剪刀' and computer == '布' :    # 第三组
         count_player += 1
         print(f'玩家出{player},电脑出{computer},玩家胜利')
         valid_rounds += 1
         total_rounds += 1
 
-    if player == '剪刀' and computer == '石头' :  # 第四组
+    elif player == '剪刀' and computer == '石头' :  # 第四组
         count_computer += 1
         print(f'玩家出{player},电脑出{computer},电脑胜利')
         valid_rounds += 1
         total_rounds += 1
 
-    if player == '布' and computer == '石头' :    # 第五组
+    elif player == '布' and computer == '石头' :    # 第五组
         count_player += 1
         print(f'玩家出{player},电脑出{computer},玩家胜利')
         valid_rounds += 1
         total_rounds += 1
 
-    if player == '布' and computer == '剪刀' :    # 第六组
+    elif player == '布' and computer == '剪刀' :    # 第六组
         count_computer += 1
         print(f'玩家出{player},电脑出{computer},电脑胜利')
         valid_rounds += 1
@@ -70,18 +70,17 @@ while (count_player < 3) and (count_computer < 3) and (total_rounds < 10) :
 
 # 判断输赢 :
 
-if total_rounds ==10 :
-    print('哦不，大家似乎运气相同呢，快去买张彩票吧~')
 
-else :
-    if count_player == 3 :
+if count_player == 3 :
         print(f'共 {valid_rounds} 局，玩家得到 {count_player} 分，电脑得到 {count_computer} 分')
         print('恭喜，是你赢了!')
-    elif count_computer == 3 :
+elif count_computer == 3 :
         print(f'共 {valid_rounds} 局，玩家得到 {count_player} 分，电脑得到 {count_computer} 分')
         print('没关系，下次一定！')
-    else :
-        print(f'玩家得到 {count_player} 分，电脑得到 {count_computer} 分,有效局 {valid_rounds} 次，总共 {total_rounds} 次，我没落情况吧？')
+else :
+    print('哦不，大家似乎运气相同呢，快去买张彩票吧~')
+
+# 先判断输赢再判断总局数，避免刚好十局结束结果没有得到结果
 
 # 结束
 
